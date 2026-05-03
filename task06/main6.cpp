@@ -22,18 +22,9 @@ int main() {
     } while (startAmount < 1 && percent < 1 && percent > 101 && stopAmount < 1);
 
     while(startAmount < stopAmount) {
-        int persCalc = 0;
-        int count;
+        int persCalc = startAmount * percent / 100;
 
-        count = years;
-
-        do {
-            persCalc = startAmount * percent / 100;
-            count --;
-        }
-        while (count != 0);
-
-        startAmount = startAmount + persCalc;
+        startAmount += persCalc;
         years ++;
     }
 
